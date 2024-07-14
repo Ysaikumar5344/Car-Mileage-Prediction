@@ -8,7 +8,7 @@ import pickle
 import io
 
 # Load the dataset
-file_path = r"C:\Users\Y SAI KUMAR\Downloads\mtcars (1).xlsx"
+file_path = r"mtcars (1).xlsx"
 df = pd.read_excel(file_path)
 
 # Calculate min and max values for each relevant field
@@ -38,11 +38,11 @@ def create_number_image(number, width_cm, height_cm):
     return buf
 
 # Streamlit app
-st.image(r"C:\Users\Y SAI KUMAR\Music\innomatics-footer-logo.webp")
+st.image(r"innomatics-footer-logo.webp")
 st.title("Car Mileage Prediction")
 
 # Load the model
-model = pickle.load(open(r"C:\Users\Y SAI KUMAR\New folder\lin.pkl", "rb"))
+model = pickle.load(open(r"lin.pkl", "rb"))
 
 # Input fields for car details with min and max values
 cyl = st.number_input("Enter the number of cylinders", min_value=min_max_values['cyl'][0], max_value=min_max_values['cyl'][1])
